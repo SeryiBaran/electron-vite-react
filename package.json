@@ -1,0 +1,40 @@
+{
+  "name": "vite-react-electron",
+  "productName": "Electron",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Vite React Electron boilerplate.",
+  "author": "草鞋没号 <308487730@qq.com>",
+  "license": "MIT",
+  "main": "dist/main/index.cjs",
+  "scripts": {
+    "dev": "node scripts/watch.mjs",
+    "build": "tsc --noEmit -p packages/renderer/tsconfig.json && node scripts/build.mjs && electron-builder"
+  },
+  "engines": {
+    "node": ">=14.17.0"
+  },
+  "dependencies": {
+    "electron-store": "^8.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "@vitejs/plugin-react": "^2.0.0",
+    "electron": "^19.0.9",
+    "electron-builder": "^23.1.0",
+    "execa": "^6.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.53.0",
+    "typescript": "^4.7.4",
+    "vite": "^3.0.2",
+    "vite-plugin-esmodule": "^1.4.1",
+    "vite-plugin-optimizer": "^1.4.0",
+    "vite-plugin-resolve": "^2.1.2"
+  },
+  "env": {
+    "VITE_DEV_SERVER_HOST": "127.0.0.1",
+    "VITE_DEV_SERVER_PORT": 7777
+  }
+}
